@@ -8,8 +8,7 @@ $( ".ui-autocomplete-input" ).live( "autocompleteopen", function() {
 		return;
 	}
 
-	menu.activate( $.Event({ type: 'mouseenter' }), menu.element.children().first() );
+	menu.activate( $.Event({ type: "mouseenter" }), menu.element.children().first() );
 });
 
 }(jQuery));
-
