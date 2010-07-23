@@ -1,4 +1,4 @@
-(function($) {
+(function( $ ) {
 
 $( ".ui-autocomplete-input" ).live( "autocompleteopen", function() {
 	var autocomplete = $( this ).data( "autocomplete" ),
@@ -11,4 +11,4 @@ $( ".ui-autocomplete-input" ).live( "autocompleteopen", function() {
 	menu.activate( $.Event({ type: "mouseenter" }), menu.element.children().first() );
 });
 
-}(jQuery));
+}( jQuery ));
