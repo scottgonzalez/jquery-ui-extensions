@@ -12,7 +12,20 @@
 	<script>
 	$(function() {
 		$( "#autocomplete" ).autocomplete({
-			source: [ "aardvark", "<b>apple</b>", "<i>atom</i>" ],
+			source: [
+				{
+					label: "aardvark", 
+					value: "aardvark"
+				},
+				{
+					label: "<b>apple</b>",
+					value: "apple"
+				},
+				{
+					label: "<i>atom</i>",
+					value: "atom"
+				}
+			],
 			html: true
 		});
 	});
