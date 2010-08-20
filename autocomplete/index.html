@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Autocomplete Extensions</title>
+	
+	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/base/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../listing.css">
+</head>
+<body>
+
+<h1>jQuery UI Autocomplete Extensions</h1>
+
+<div class="ui-widget">
+<p>These are extensions to the <a href="http://docs.jquery.com/UI/Autocomplete">jQuery UI Autocomplete</a> widget.</p>
+</div>
+
+<div class="ui-widget">
+	<div class="ui-widget-header">
+		<h2><a href="accentFolding.html">Accent Folding</a></h2>
+	</div>
+	<div class="ui-widget-content">
+		<p>Enable accent folding in your search terms. This makes it possible to search for values that contain accents without requiring the user to type the accented characters. For example, a user could search for "Jörn" by simply typing "Jorn".</p>
+		<h3>API</h3>
+		<p>This extension does not expose any API. Accent folding is automatically enabled for all autocomplete fields.</p>
+	</div>
+</div>
+
+<div class="ui-widget">
+	<div class="ui-widget-header">
+		<h2><a href="autoSelect.html">Auto Select</a></h2>
+	</div>
+	<div class="ui-widget-content">
+		<p>Automatically select an item if the user types a valid value and leaves the text field without explicitly selecting the item from the menu.</p>
+		<h3>API</h3>
+		<p>This extension does not expose any API. Values are automatically selected for all autocomplete fields if there is a perfect match in the results.</p>
+	</div>
+</div>
+
+<div class="ui-widget">
+	<div class="ui-widget-header">
+		<h2><a href="html.html">HTML labels</a></h2>
+	</div>
+	<div class="ui-widget-content">
+		<p>Allow HTML to be displayed for each item's label.</p>
+		<h3>API</h3>
+		<p>This extension adds a boolean <code>html</code> option. When set to true, the label will be interpreted as HTML. When set to false, the label will be interpreted as text.</p>
+	</div>
+</div>
+
+<div class="ui-widget">
+	<div class="ui-widget-header">
+		<h2><a href="selectFirst.html">Select First Item</a></h2>
+	</div>
+	<div class="ui-widget-content">
+		<p>Automatically place focus on the first item in the menu. This reduces the number of keystrokes necessary to choose an item.</p>
+		<h3>API</h3> 
+		<p>This extension adds a boolean <code>selectFirst</code> option. When set to true, the first item in the menu will automatically be focused when the menu is shown.</p>
+	</div>
+</div>
+
+</body>
+</html>

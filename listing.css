@@ -1,0 +1,14 @@
+body {
+	font-size: 62.5%;
+}
+.ui-widget {
+	margin-top: 2em;
+}
+.ui-widget-header,
+.ui-widget-content {
+	padding: 0.5em 1em;
+}
+.ui-widget-header h2 {
+	margin: 0;
+	pading: 0;
+}

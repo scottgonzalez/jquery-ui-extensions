@@ -1,0 +1,13 @@
+.source {
+	margin-top: 2em;
+}
+
+.source p,
+.source pre {
+	margin: 0.25em 0;
+	padding: 0;
+}
+
+.source .note {
+	font-style: italic;
+}
