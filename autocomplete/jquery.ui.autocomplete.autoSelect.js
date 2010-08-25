@@ -1,3 +1,11 @@
+/*
+ * jQuery UI Autocomplete Auto Select Extension
+ *
+ * Copyright 2010, Scott González (http://scottgonzalez.com)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * http://github.com/scottgonzalez/jquery-ui-extensions
+ */
 (function( $ ) {
 
 $.ui.autocomplete.prototype.options.autoSelect = true;
