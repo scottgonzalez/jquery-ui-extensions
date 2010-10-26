@@ -20,7 +20,7 @@ function filter( array, term ) {
 
 $.extend( proto, {
 	_initSource: function() {
-		if ( $.isArray(this.options.source) ) {
+		if ( this.options.html && $.isArray(this.options.source) ) {
 			this.source = function( request, response ) {
 				response( filter( this.options.source, request.term ) );
 			};
