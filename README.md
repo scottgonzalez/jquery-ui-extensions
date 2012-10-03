@@ -2,5 +2,5 @@
 
 See the README's in each folder for documentation.
 
-* [Autocomplete](autocomplete/README.md)
-* [Dialog](dialog/README.md)
+* [Autocomplete](jquery-ui-extensions/autocomplete/README.md)
+* [Dialog](jquery-ui-extensions/dialog/README.md)
