@@ -1,3 +1,3 @@
 ## jQuery UI Extensions ##
 
-See the README's in each folder for documentation.
+See the README in each folder for documentation.
