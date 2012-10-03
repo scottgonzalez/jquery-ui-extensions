@@ -4,7 +4,7 @@ These are extensions to the [jQuery UI Autocomplete](http://docs.jquery.com/UI/A
 
 ### Accent Folding ###
 
-See [accentFolding.html](accentFolding.html)
+See [accentFolding.html](autocomplete/accentFolding.html)
 
 Enable accent folding in your search terms. This makes it possible to search for values that contain accents without requiring the user to type the accented characters. For example, a user could search for "Jörn" by simply typing "Jorn".
 
@@ -16,7 +16,7 @@ This extension does not expose any API. Accent folding is automatically enabled 
 
 ### Auto Select ###
 
-See [autoSelect.html](autoSelect.html)
+See [autoSelect.html](autocomplete/autoSelect.html)
 
 Automatically select an item if the user types a valid value and leaves the text field without explicitly selecting the item from the menu.
 
@@ -28,7 +28,7 @@ This extension does not expose any API. Values are automatically selected for al
 
 ### HTML labels ###
 
-See [html.html](html.html)
+See [html.html](autocomplete/html.html)
 
 Allow HTML to be displayed for each item's label.
 
@@ -39,7 +39,7 @@ This extension adds a boolean `html` option. When set to true, the label will be
 
 ### Select First Item ###
 
-See [selectFirst.html](selectFirst.html)
+See [selectFirst.html](autocomplete/selectFirst.html)
 
 Automatically place focus on the first item in the menu. This reduces the number of keystrokes necessary to choose an item.
 
