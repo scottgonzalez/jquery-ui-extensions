@@ -5,17 +5,22 @@
  * Dual licensed under the MIT or GPL Version 2 licenses.
  *
  * http://github.com/scottgonzalez/jquery-ui-extensions
+ *
  */
 (function( $ ) {
 
 $.ui.autocomplete.prototype.options.autoSelect = true;
-$( ".ui-autocomplete-input" ).live( "blur", function( event ) {
-	var autocomplete = $( this ).data( "autocomplete" );
+$(document).on( 'blur', '.ui-autocomplete-input', function( event ) {
+
+	var jQUIver = jQuery.ui.version.split('.');
+
+	var autocomplete = ( jQUIver[0] >=2 || ( jQUIver[0] == 1 && jQUIver[1] >= 10 ) ? $(this).data("uiAutocomplete") : $(this).data("autocomplete") );
+
 	if ( !autocomplete.options.autoSelect || autocomplete.selectedItem ) { return; }
 
 	var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( $(this).val() ) + "$", "i" );
 	autocomplete.widget().children( ".ui-menu-item" ).each(function() {
-		var item = $( this ).data( "item.autocomplete" );
+		var item = ( jQUIver[0] >=2 || ( jQUIver[0] == 1 && jQUIver[1] >= 10 ) ? $(this).data("uiAutocompleteItem") : $(this).data("item.autocomplete") );
 		if ( matcher.test( item.label || item.value || item ) ) {
 			autocomplete.selectedItem = item;
 			return false;
