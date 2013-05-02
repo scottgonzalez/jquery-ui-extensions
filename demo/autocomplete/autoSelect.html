@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Autocomplete Extension - Auto Select Option</title>
+
+	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/themes/base/jquery-ui.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.js"></script>
+	<script src="../../src/autocomplete/jquery.ui.autocomplete.autoSelect.js"></script>
+	<script src="demo.js"></script>
+	<script>
+	$(function() {
+		function log( str ) {
+			$('<p></p>')
+				.text( str )
+				.appendTo( 'body' );
+		}
+
+		$( "#autocomplete" ).autocomplete({
+			source: [ "aardvark", "apple", "atom" ],
+			focus: function( event, ui ) {
+				log( "focus: " + ui.item.label );
+			},
+			select: function( event, ui ) {
+				log( "select: " + ui.item.label );
+			},
+			change: function( event, ui ) {
+				log( "change: " + ( ui.item ? ui.item.label : "<no item>" ) );
+			}
+		});
+	});
+	</script>
+</head>
+<body>
+
+<input id="autocomplete">
+
+</body>
+</html>
