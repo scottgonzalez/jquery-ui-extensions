@@ -30,9 +30,12 @@ $.extend( proto, {
 	},
 
 	_renderItem: function( ul, item) {
+		item.text = item.label;
+		this._trigger( 'format', null, item );
+
 		return $( "<li></li>" )
 			.data( "item.autocomplete", item )
-			.append( $( "<a></a>" )[ this.options.html ? "html" : "text" ]( item.label ) )
+			.append( $( "<a></a>" )[ this.options.html ? "html" : "text" ]( item.text ) )
 			.appendTo( ul );
 	}
 });
