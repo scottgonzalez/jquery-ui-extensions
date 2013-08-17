@@ -12,3 +12,5 @@ If you're looking for the `selectFirst` extension for autocomplete, check the
 `selectFirst` has been removed from master because the option was rolled into
 newer versions of jQuery UI as the
 [`autoFocus`](http://api.jqueryui.com/autocomplete/#option-autoFocus) option.
+
+Support this project by [donating on Gittip](https://www.gittip.com/scottgonzalez/).
