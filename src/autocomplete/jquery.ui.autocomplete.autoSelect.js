@@ -10,12 +10,12 @@
 
 $.ui.autocomplete.prototype.options.autoSelect = true;
 $( ".ui-autocomplete-input" ).live( "blur", function( event ) {
-	var autocomplete = $( this ).data( "autocomplete" );
+	var autocomplete = $( this ).data( "ui-autocomplete" );
 	if ( !autocomplete.options.autoSelect || autocomplete.selectedItem ) { return; }
 
 	var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( $(this).val() ) + "$", "i" );
 	autocomplete.widget().children( ".ui-menu-item" ).each(function() {
-		var item = $( this ).data( "item.autocomplete" );
+		var item = $( this ).data( "ui-autocomplete-item" );
 		if ( matcher.test( item.label || item.value || item ) ) {
 			autocomplete.selectedItem = item;
 			return false;
