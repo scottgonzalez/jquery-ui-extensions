@@ -9,7 +9,7 @@
 (function( $ ) {
 
 $.ui.autocomplete.prototype.options.autoSelect = true;
-$( ".ui-autocomplete-input" ).live( "blur", function( event ) {
+$(document).on( "blur", ".ui-autocomplete-input", function( event ){
 	var autocomplete = $( this ).data( "ui-autocomplete" );
 	if ( !autocomplete.options.autoSelect || autocomplete.selectedItem ) { return; }
 
