@@ -738,21 +738,15 @@ autocomplete.accentFolding = {
 	}
 };
 
-var _initSource = autocomplete.prototype._initSource;
-autocomplete.prototype._initSource = function() {
-	var source = this.options.source;
-	if ( $.isArray(source) ) {
-		this.source = function( request, response ) {
-			var matcher = new RegExp( autocomplete.escapeRegex( request.term ), "i" );
-			response( $.grep( source, function( value ) {
+	$.ui.autocomplete.filter = function (array, term) {
+			var matcher = new RegExp( $.ui.autocomplete.escapeRegex(term), "i");
+			return $.grep(array, function (value) {
 				value = value.label || value.value || value;
 				return matcher.test( value ) ||
-					matcher.test( autocomplete.accentFolding.fold( value ) );
-			}) );
-		};
-	} else {
-		return _initSource.call( this );
-	}
-};
+				matcher.test( $.ui.autocomplete.accentFolding.fold( value ) );
+			});
+		};		
 
 })( jQuery );
+
+		
