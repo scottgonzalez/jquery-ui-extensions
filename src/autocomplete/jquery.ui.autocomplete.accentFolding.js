@@ -738,15 +738,13 @@ autocomplete.accentFolding = {
 	}
 };
 
-	$.ui.autocomplete.filter = function (array, term) {
-			var matcher = new RegExp( $.ui.autocomplete.escapeRegex(term), "i");
-			return $.grep(array, function (value) {
-				value = value.label || value.value || value;
-				return matcher.test( value ) ||
-				matcher.test( $.ui.autocomplete.accentFolding.fold( value ) );
-			});
-		};		
+$.ui.autocomplete.filter = function (array, term) {
+	var matcher = new RegExp( $.ui.autocomplete.escapeRegex(term), "i");
+	return $.grep(array, function (value) {
+		  value = value.label || value.value || value;
+		  return matcher.test( value ) ||
+			  matcher.test( $.ui.autocomplete.accentFolding.fold( value ) );
+		});
+};		
 
 })( jQuery );
-
-		
