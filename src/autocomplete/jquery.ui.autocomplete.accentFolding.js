@@ -8,6 +8,10 @@
  */
 (function( $ ) {
 
+if (typeof $.ui == "undefined" || typeof $.ui.autocomplete == "undefined"){
+	$.ui = { autocomplete: function () {} }
+}
+
 var autocomplete = $.ui.autocomplete;
 
 autocomplete.accentFolding = {
